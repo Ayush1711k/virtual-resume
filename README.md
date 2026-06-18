@@ -16,6 +16,13 @@ Currently deployed live on **Vercel**: [Insert Your Vercel Link Here]
 * **Styling Architecture:** Pure CSS with CSS Variables for easy theming (no external CSS frameworks, demonstrating core styling proficiency).
 * **Deployment:** CI/CD pipeline integrated via GitHub to Vercel.
 
+👤 About the Developer
+I am a 4th Year Maters of Computer Applications (MCA) Integrated student specializing in full-stack development. My technical foundation spans Java, Node.js, Express, and MySQL, alongside hands-on experience in real-time application development (Socket.io) and digital brand management.
+
+Beyond writing clean code, I actively manage digital communities, produce multimedia content, and explore the intersection of AI generation and software engineering.
+
+Built with code and coffee in Agra, India.
+
 > **Note on Architecture:** This repository is currently structured as a static frontend application for rapid global deployment. It is designed to be easily decoupled and connected to a Python (Flask/FastAPI) or Node.js backend for dynamic database fetching and contact form handling in the future.
 
 ## 🚀 Local Setup
@@ -30,9 +37,5 @@ Bash
    cd virtual-resume
 Open index.html directly in your web browser, or use an extension like VS Code Live Server for hot reloading.
 
-👤 About the Developer
-I am a 4th Year Maters of Computer Applications (MCA) Integrated student specializing in full-stack development. My technical foundation spans Java, Node.js, Express, and MySQL, alongside hands-on experience in real-time application development (Socket.io) and digital brand management.
 
-Beyond writing clean code, I actively manage digital communities, produce multimedia content, and explore the intersection of AI generation and software engineering.
 
-Built with code and coffee in Agra, India.
