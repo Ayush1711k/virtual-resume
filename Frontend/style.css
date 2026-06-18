@@ -1,0 +1,365 @@
+/* --- Modern Light Mode Variables --- */
+:root {
+    --bg-color: #f8fafc; /* Light Slate */
+    --surface-color: #ffffff; /* Clean White */
+    --surface-hover: #f1f5f9; /* Subtle gray on hover */
+    --text-primary: #0f172a; /* Dark Slate for high contrast readability */
+    --text-secondary: #475569; /* Medium Slate */
+    --accent-color: #2563eb; /* Professional Developer Blue */
+    --accent-glow: rgba(37, 99, 235, 0.2);
+    --border-color: rgba(15, 23, 42, 0.1); /* Subtle dark border */
+    --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+    --ease-out: cubic-bezier(0, 0, 0.2, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+/* --- Background Image with White Overlay --- */
+.bg-gradient {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    /* High-quality CSE/Coding workspace image from Unsplash */
+    background-image: url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+    /* 92% white overlay so the image is subtle and text is readable */
+    box-shadow: inset 0 0 0 2000px rgba(248, 250, 252, 0.92);
+    z-index: -1;
+}
+
+/* --- Navigation --- */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 10%;
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.4rem;
+    letter-spacing: -1px;
+}
+
+.highlight { color: var(--accent-color); }
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.3s var(--ease-standard), transform 0.3s var(--ease-standard);
+    display: inline-block;
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+    transform: translateY(-2px);
+}
+
+/* --- Hero Section --- */
+.hero {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 10%;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    letter-spacing: -2px;
+    margin-bottom: 1rem;
+    line-height: 1.1;
+}
+
+.hero h2 {
+    font-size: 1.6rem;
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+
+.hero p {
+    max-width: 600px;
+    color: var(--text-secondary);
+    margin-bottom: 3rem;
+    font-weight: 400;
+}
+
+.cursor {
+    display: inline-block;
+    width: 10px;
+    color: var(--accent-color);
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    from, to { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1.5rem;
+}
+
+/* --- Buttons --- */
+.btn {
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s var(--ease-out);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+.primary {
+    background-color: var(--accent-color);
+    color: #ffffff;
+    box-shadow: 0 4px 15px var(--accent-glow);
+}
+
+.primary:hover {
+    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
+}
+
+.secondary {
+    background-color: var(--surface-color);
+    color: var(--text-primary);
+    border: 2px solid var(--border-color);
+}
+
+.secondary:hover {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+}
+
+/* --- Shared Layout & Containers --- */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 6rem 10%;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background-color: var(--accent-color);
+    border-radius: 2px;
+}
+
+/* --- Skills Section --- */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+}
+
+.skill-category {
+    background-color: var(--surface-color);
+    padding: 2.5rem 2rem;
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s var(--ease-standard), border-color 0.3s var(--ease-standard), box-shadow 0.3s var(--ease-standard);
+    text-align: center;
+}
+
+.skill-category:hover {
+    transform: translateY(-5px);
+    border-color: rgba(37, 99, 235, 0.3);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.skill-category .icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.skill-category h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.skill-category p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+/* --- Projects Section --- */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+}
+
+.project-card {
+    background-color: var(--surface-color);
+    padding: 2rem;
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    transition: all 0.4s var(--ease-standard);
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card:hover {
+    transform: translateY(-8px) scale(1.01);
+    background-color: var(--surface-hover);
+    border-color: rgba(37, 99, 235, 0.4);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+.project-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.25rem;
+}
+
+.tech-stack {
+    margin-top: auto;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-color);
+}
+
+/* --- Contact Section --- */
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 1.2rem;
+    background-color: var(--surface-color);
+    border: 2px solid var(--border-color);
+    color: var(--text-primary);
+    border-radius: 12px;
+    font-size: 0.95rem;
+    transition: border-color 0.3s var(--ease-standard), box-shadow 0.3s var(--ease-standard);
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 3px var(--accent-glow);
+}
+
+.contact-info h3 {
+    margin-bottom: 1rem;
+}
+
+.contact-info p {
+    color: var(--text-secondary);
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 3rem;
+    border-top: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    background-color: var(--surface-color);
+}
+
+/* --- Animation Classes --- */
+.load-hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s var(--ease-out) forwards;
+    animation-delay: 0.2s;
+}
+
+.scroll-hidden {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out);
+}
+
+.scroll-show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.project-card.loaded {
+    animation: fadeInUp 0.5s var(--ease-out) forwards;
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2.8rem; }
+    .hero h2 { font-size: 1.3rem; }
+    .nav-links { display: none; }
+    .contact-wrapper { grid-template-columns: 1fr; gap: 2rem; }
+    .container { padding: 4rem 5%; }
+}

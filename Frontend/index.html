@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayushman Sharma | Full-Stack Developer</title>
+    <!-- Modern Font: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <!-- Background Gradient Effect -->
+    <div class="bg-gradient"></div>
+
+    <nav>
+        <div class="logo">Ayushman <span class="highlight">Sharma</span></div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero section animates immediately on load -->
+    <header class="hero load-hidden">
+        <h1>Hi, I'm <span class="highlight">Ayushman Sharma</span><span class="cursor">|</span></h1>
+        <h2>Full-Stack Developer | 4th-Year MCA Integrated Student</h2>
+        <p>I build robust backends, real-time applications, and engaging digital content.</p>
+        <div class="hero-buttons">
+            <a href="#projects" class="btn primary">View My Work</a>
+            <a href="https://github.com/Ayush1711k" target="_blank" class="btn secondary">GitHub</a>
+        </div>
+    </header>
+
+    <!-- Scroll-triggered animation classes added here (scroll-hidden) -->
+    <section id="about" class="container scroll-hidden">
+        <div class="section-content">
+            <h2>About Me</h2>
+            <p>I am a 4th-year Master of Computer Applications (MCA) integrated student with a passion for building scalable software. Whether I'm designing a real-time communication platform like Flowstate or managing multimedia content for my gaming channel, RedDot Rush, I love solving problems through technology and design.</p>
+        </div>
+    </section>
+
+    <section id="education" class="container scroll-hidden">
+        <div class="section-content">
+            <h2>Education</h2>
+            <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                <div class="project-card">
+                    <h3>Master of Computer Applications (MCA) Integrated</h3>
+                    <p style="color: var(--accent-color); font-weight: 600; font-size: 0.9rem; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 1px;">
+                        Raja Balwant Singh Management Technical Campus , Agra | 2023 - 2028
+                    </p>
+                    <p style="color: var(--text-secondary);">
+                        Core coursework focusing on full-stack development, Data Analysis and Algorithms (DAA), and Object-Oriented Programming (OOP) in Java.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="container scroll-hidden">
+        <div class="section-content">
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <div class="icon">💻</div>
+                    <h3>Languages</h3>
+                    <p>Java, JavaScript, Python, MATLAB</p>
+                </div>
+                <div class="skill-category">
+                    <div class="icon">⚙️</div>
+                    <h3>Backend</h3>
+                    <p>Node.js, Express, Flask, Socket.io</p>
+                </div>
+                <div class="skill-category">
+                    <div class="icon">🗄️</div>
+                    <h3>Databases</h3>
+                    <p>MySQL, SQLite</p>
+                </div>
+                <div class="skill-category">
+                    <div class="icon">🤖</div>
+                    <h3>AI Tools</h3>
+                    <p>Antigravity, Stitch, ChatGPT, GitHub Copilot, Gemini </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="container scroll-hidden">
+        <div class="section-content">
+            <h2>Featured Projects</h2>
+            <div id="projects-container" class="projects-grid">
+                <p>Connecting to backend server...</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="container scroll-hidden">
+        <div class="section-content">
+            <h2>Let's Connect</h2>
+            <div class="contact-wrapper">
+                <form id="contact-form">
+                    <input type="text" id="name" placeholder="Your Name" required>
+                    <input type="email" id="email" placeholder="Your Email" required>
+                    <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+                    <button type="submit" class="btn primary">Send Message</button>
+                    <p id="form-status"></p>
+                </form>
+                <div class="contact-info">
+                    <h3>Available for opportunities</h3>
+                    <p>Feel free to reach out via the form, or email me directly at <a href="mailto:ayushsharma6221@gmail.com" class="highlight">ayushsharma6221@gmail.com</a>.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Ayushman Sharma. Built with Python & Vanilla JS.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
