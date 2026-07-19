@@ -1,6 +1,5 @@
 // --- SETUP ON LOAD ---
 window.onload = () => {
-    loadProjects();
     setupScrollAnimations();
 };
 
@@ -20,24 +19,6 @@ function setupScrollAnimations() {
 
     const hiddenElements = document.querySelectorAll('.scroll-hidden');
     hiddenElements.forEach((el) => observer.observe(el));
-}
-
-
-// --- STATIC FUNCTION: DISPLAY PLACEHOLDER PROJECT NAMES ---
-function loadProjects() {
-    const container = document.getElementById('projects-container');
-    
-    // An array of placeholder names instead of actual projects
-    const placeholderProjects = [
-        "Flowstate - Real-Time Communication Platform"
-    ];
-    
-    // Map the placeholders to the clean, minimalist card structure
-    container.innerHTML = placeholderProjects.map((name, index) => `
-        <div class="project-card loaded" style="animation-delay: ${index * 0.1}s; justify-content: center; align-items: center; text-align: center; min-height: 150px;">
-            <h3 style="margin: 0; font-size: 1.6rem; color: var(--text-primary);">${name}</h3>
-        </div>
-    `).join('');
 }
 
 // --- FORM FUNCTION: CONTACT HANDLING VIA WEB3FORMS ---
